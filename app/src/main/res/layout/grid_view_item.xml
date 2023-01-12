@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="photo"
+            type="com.mdasrafulalam78.retrofit.model.MarsPhoto" />
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_margin="6dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp"
+        app:contentPadding="6dp"
+        android:shadowColor="#AAA0A0"
+        android:layout_width="170dp"
+        android:layout_height="170dp">
+        <ImageView
+            android:id="@+id/mars_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:padding="2dp"
+            app:imageUrl="@{photo.imgSrcUrl}"
+            tools:src="@tools:sample/backgrounds/scenic"/>
+    </androidx.cardview.widget.CardView>
+</layout>
